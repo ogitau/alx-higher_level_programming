@@ -7,8 +7,8 @@ if number >= 0:
 if number < 0:
     last = number % -10
 if last > 5:
-    print(f"{ld}{number} is {last} and is greater than 5")
-elif last == 0:
-    print(f"{ld}{number} is {last} and is zero")
-else:
-    print(f"{ld}{number} is {last} is less than 6 and is not 0")
+    print("{}{} is {} and is greater than 5".format(ld, number, last)
+            elif last == 0:
+            print("{}{} is {} and is zero".format(ld, number, last)
+                else:
+                print("{}{} is {} is less than 6 and is not 0".format(ld, number, last))
