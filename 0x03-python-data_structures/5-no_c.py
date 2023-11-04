@@ -1,3 +1,7 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 def no_c(my_string):
-    return ''.join (x for x in my_string if x not in 'Cc')
+    oth = []
+    for x in my_string:
+        if x != 'c' and x != 'C':
+            oth.append(x)
+    return "".join(oth)
