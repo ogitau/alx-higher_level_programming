@@ -1,7 +1,4 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    if(matrix):
-        new = []
-        for rows in matrix:
-            new.append([n ** 2 for n in rows])
-        return (new)
+    if matrix:
+        return [[i**2 for i in row] for row in (matrix)]
