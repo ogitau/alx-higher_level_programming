@@ -1,12 +1,15 @@
 #!/usr/bin/python3
+"""defines a class square"""
+
+
 class Square:
-    """
-    creates a class Square
-    """
-    def __init__ (self, size):
+
+    """creates a class Square"""
+
+    def __init__(self, size):
+
+        """defines a private attribute"""
+
         self.__size = size
-        """
-        initialized class object square
-        initialized a private attribute:
-        __size(int)
-        """
+
+        """ initialized a private attribute: __size"""
