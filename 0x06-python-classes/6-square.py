@@ -1,33 +1,22 @@
 #!/usr/bin/python3
-"""defines a square class"""
+"""instantiates a class"""
 
 
 class Square:
     """Creates a square"""
     def __init__(self, size=0, position=(0, 0)):
-        """Initializes the size of a square
-         Args:
-            size (int): The size of the square
-            position (tuple(int, int)):
-                tuple 1: no. of spaces to print before the square
-                tuple 2: no. of new lines to print before the square
-        """
-        self.size = size
-        self.position = position
+        """Initializes the size of a square and its position"""
+        self.__size = size
+        self.__position = position
 
     @property
     def size(self):
-        """Getter - gets the size of the square
-        Returns: The size of the square
-        """
+        """Getter for the size"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Setter - sets the value of the size of the square
-        Args:
-            value (int): the size of the square
-        """
+        """Setter of the size"""
         if type(value) != int:
             print("size must be an integer", end="")
             raise TypeError
@@ -39,18 +28,12 @@ class Square:
 
     @property
     def position(self):
-        """Getter - gets the position
-
-        Returns: the value of the position
-        """
+        """Getter  of the position"""
         return self.__position
 
     @position.setter
     def position(self, value):
-        """Setter - sets the value of the position
-        Args:
-            value (int): the position of the square
-        """
+        """Setter of the position"""
         if type(value) != tuple or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif type(value[0]) != int or type(value[1]) != int:
@@ -61,9 +44,7 @@ class Square:
             self.__position = value
 
     def area(self):
-        """Calculates the area of the square
-        Returns: The value of the area
-        """
+        """Calculates and returns the area"""
         return self.__size**2
 
     def my_print(self):
