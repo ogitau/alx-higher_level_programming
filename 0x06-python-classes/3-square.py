@@ -25,6 +25,5 @@ class Square:
         checks for several conditions and raises errors if not met"""
 
         def area(self):
-            return self.__size **2 
-
+            return self.__size * self.__size
         """finds the area and returns it """
