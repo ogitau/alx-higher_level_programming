@@ -10,7 +10,7 @@ class Square:
 
         """initalizes attributes of square"""
 
-        if (type(size) is not int):
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
 
         """checks if condition is not int is met and raises error if not"""
@@ -24,6 +24,7 @@ class Square:
         """initializes size as an integer
         checks for several conditions and raises errors if not met"""
 
-        def area(self):
-            return self.__size * self.__size
-        """finds the area and returns it """
+    def area(self):
+        return (self.__size ** 2)
+
+    """finds the area and returns it """
