@@ -52,7 +52,7 @@ class SinglyLinkedList:
     def __str__(self):
         """ pprints the list"""
 
-        print_all =""
+        print_all = ""
         position = self.head
         while position:
             print_all += str(position.data) + "\n"
