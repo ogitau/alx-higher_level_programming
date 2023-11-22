@@ -57,6 +57,7 @@ class SinglyLinkedList:
         while position:
             print_all += str(position.data) + "\n"
             position = position.next_node
+            """prints all the elements from the list"""
         return print_all[:-1]
 
     def sorted_insert(self, value):
@@ -66,13 +67,18 @@ class SinglyLinkedList:
         if not self.head:
             self.head = new
             return
+
+        """sorts the list to be printed from the head to the last element"""
         if value < self.head.data:
             new.next_node = self.head
             self.head = new
             return
+
+        """checks for values in the nodes for printing"""
         position = self.head
         while position.next_node and position.next_node.data < value:
             position = position.next_node
         if position.next_node:
             new.next_node = position.next_node
         position.next_node = new
+        """ makes the new position of next_node to new if no node is found"""
