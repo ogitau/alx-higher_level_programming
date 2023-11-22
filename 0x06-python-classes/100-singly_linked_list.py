@@ -52,13 +52,13 @@ class SinglyLinkedList:
     def __str__(self):
         """ pprints the list"""
 
-        print_all = ""
+        printsll = ""
         position = self.head
         while position:
-            print_all += str(position.data) + "\n"
+            printsll += str(position.data) + "\n"
             position = position.next_node
             """prints all the elements from the list"""
-        return print_all[:-1]
+        return printsll[:-1]
 
     def sorted_insert(self, value):
         """inserts sorted values"""
