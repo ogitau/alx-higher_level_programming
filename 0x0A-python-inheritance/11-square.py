@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""my class module"""
+"""
+Contains the class BaseGeometry and subclass Rectangle
+"""
 
 
 class BaseGeometry:
@@ -35,16 +37,17 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
-    """class square inherits from class rectanglr"""
+    """A representation of a square"""
     def __init__(self, size):
-
-        """initialization of size"""
-
+        """instantiation of the square"""
         self.integer_validator("size", size)
-        super().__init__(size, size)
         self.__size = size
+        super().__init__(size, size)
+
+    def area(self):
+        """"returns the area of the square"""
+        return self.__size ** 2
 
     def __str__(self):
-        """returns the string representation of the square"""
-
-        return "[square] {}/{}".format(self.__size, self.__size)
+        """informal string reepresentation of the square"""
+        return "[Square] {:d}/{:d}".format(self.__size, self.__size)
