@@ -3,7 +3,6 @@
 returns the number of characters added"""
 
 
-
 def append_write(filename="", text=""):
     """returns the number of characters added"""
 
