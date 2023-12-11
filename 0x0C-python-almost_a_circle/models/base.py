@@ -14,7 +14,7 @@ class Base:
         if id is not None:
             self.id = id
         else:
-            Base.__nb_objects +=1
+            Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
     @staticmethod
@@ -42,17 +42,17 @@ class Base:
 
         dummy.update(**dictionary)
         return dummy
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
-        """loads list objects into dicts and sends them to a function that 
+        """loads list objects into dicts and sends them to a function that
         turns them into json"""
         filename = "{}.csv".format(cls.__name__)
         obj_list = []
 
         if list_objs is not None:
             for obj in list_objs:
-                obj_list +=[obj.to_dictionary()]
+                obj_list += [obj.to_dictionary()]
 
         json_list = Base.to_json_string(obj_list)
 
@@ -97,6 +97,7 @@ class Base:
                     result = csv.DictWriter(f, fieldnames=square_header)
                 result.writeheader()
                 result.writerows(data)
+
     @classmethod
     def load_from_file_csv(cls):
         """deserialization into CSV"""

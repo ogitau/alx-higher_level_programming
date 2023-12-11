@@ -23,14 +23,15 @@ class Rectangle(Base):
 
     def __str__(self):
         """string representation of rectangle"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, 
-                                                        self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
+                                                        self.y, self.width, self.height)
+
     def update(self, *args, **kwargs):
         """updates for attributes of rectangle"""
         attrs = ["id", "width", "height", "x", "y"]
 
         for position, value in enumerate(args):
-            if position > (len(attrs) - 1 ):
+            if position > (len(attrs) - 1):
                 break
             setattr(self, attrs[position], value)
 
@@ -66,12 +67,12 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
-    
+
     @property
     def height(self):
         """getter for height"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """setter for height"""
@@ -80,7 +81,7 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
-    
+
     @property
     def x(self):
         """getter for x"""

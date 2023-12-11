@@ -28,7 +28,7 @@ class Square(Rectangle):
         """returns string representation of a square"""
 
         return "[square] ({}) {}/{} - {}".format(self.id,
-                                                    self.x, self.y, self.size)
+                                                 self.x, self.y, self.size)
 
     def to_dictionary(self):
         """add to dict"""
@@ -40,12 +40,11 @@ class Square(Rectangle):
 
         return new_dict
 
-
     @property
     def size(self):
         """getter for size"""
         return self.width
-    
+
     @size.setter
     def size(self, value):
         """setter for size"""
