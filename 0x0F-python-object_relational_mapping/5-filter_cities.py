@@ -2,6 +2,7 @@
 """Queries cities TABLE and joins it with states
     and sorts by input"""
 
+
 if __name__ == "__main__":
     import MySQLdb
     from sys import argv
