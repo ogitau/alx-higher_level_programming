@@ -3,8 +3,9 @@
 the passed URL with the email as a parameter, and displays
 the body of the response (decoded in utf-8)"""
 
-from sys import argv
-from urllib import request, parse
+import sys
+import urllib.request
+import urllib.parse
 
 
 if __name__ == "__main__":
